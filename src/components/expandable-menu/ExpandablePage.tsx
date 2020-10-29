@@ -1,5 +1,6 @@
 import React from 'react';
 import {Typography} from "@material-ui/core";
+import ExpandablePageContent from "./ExpandablePageContent";
 
 const handleClickBackToHomePage = () => {
   const expandablePage = document.getElementById("ExpandablePage")!;
@@ -8,7 +9,7 @@ const handleClickBackToHomePage = () => {
 
 function ExpandablePage() {
   return (
-      <div className="ExpandablePage" id="ExpandablePage">
+      <div className="ExpandablePage ExpandablePageIsVisible" id="ExpandablePage">
         <div className="Header">
           <Typography
               className="BackToHomePage"
@@ -17,9 +18,9 @@ function ExpandablePage() {
             Zurück zur Startseite
           </Typography>
         </div>
-        <div className="Content">
-          <Typography>Hier kommt Content</Typography>
-        </div>
+
+        <ExpandablePageContent />
+
       </div>
   );
 }

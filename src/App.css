@@ -93,11 +93,30 @@ div.App > div.ExpandablePage > div.Header > p.BackToHomePage:hover {
 
 div.App > div.ExpandablePage > div.Content {
   grid-area: content;
+  overflow: scroll !important;
+
 }
 
 div.App > div.ExpandablePage > div.Content > p{
   font-weight: 300;
   font-size: 16px;
+  white-space: normal !important;
+  margin-bottom: 1rem;
+}
+
+div.App > div.ExpandablePage > div.Content > p.NoMargin {
+  margin-bottom: 0 !important;
+}
+
+div.App > div.ExpandablePage > div.Content > p.Date {
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+
+div.App > div.ExpandablePage > div.Content > p.Header {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 div.App > div.TextWrapper {
