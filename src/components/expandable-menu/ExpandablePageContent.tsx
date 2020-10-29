@@ -1,9 +1,14 @@
 import React from 'react';
 import {Typography} from "@material-ui/core";
 
+const handleClick = () => {
+  const content = document.getElementById("Content")!;
+  content.scrollTop = 0;
+};
+
 function ExpandablePageContent() {
   return(
-      <div className="Content">
+      <div className="Content" id="Content">
         <Typography className="Header">Sensibilisierung mit der Corona-Pandemie im 21. Jahrhundert</Typography>
         <Typography>
           In Deutschland gilt die Meinungsfreiheit. Dieses Gut gilt es so gut wie möglich - durch die Politik, als auch durch das Volk
@@ -92,8 +97,11 @@ function ExpandablePageContent() {
         <Typography>
           Durch diese Pandemie schaffen wir es nur zusammen - und nicht alleine.
         </Typography>
-        <Typography className="Date">
+        <Typography className="SmallBottom">
           Stand: 29. Oktober 2020
+        </Typography>
+        <Typography className={"SmallBottom BackToTop"} onClick={() => handleClick()}>
+          Zurück nach oben
         </Typography>
       </div>
   );

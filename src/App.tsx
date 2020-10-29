@@ -15,7 +15,7 @@ function App() {
 
       <div className="TextWrapper">
         <Typography className="Catchline">Doch, Corona (COVID-19) gibt es!</Typography>
-        <Typography className="Subtext">Und wir müssen alle zusammenhalten, um es in den Griff zu bekommen!</Typography>
+        <Typography className="Subtext">Und es ist eine Gefahr für jeden, wenn wir nicht zusammenhalten!</Typography>
       </div>
 
       <Statistics />

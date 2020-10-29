@@ -108,11 +108,17 @@ div.App > div.ExpandablePage > div.Content > p.NoMargin {
   margin-bottom: 0 !important;
 }
 
-div.App > div.ExpandablePage > div.Content > p.Date {
+div.App > div.ExpandablePage > div.Content > p.SmallBottom {
   font-size: 14px;
   margin-top: 40px;
+  margin-right: 30px;
+  display: inline-block;
 }
 
+div.App > div.ExpandablePage > div.Content > p.BackToTop:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 div.App > div.ExpandablePage > div.Content > p.Header {
   font-size: 24px;
