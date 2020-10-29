@@ -93,7 +93,7 @@ div.App > div.ExpandablePage > div.Header > p.BackToHomePage:hover {
 
 div.App > div.ExpandablePage > div.Content {
   grid-area: content;
-  overflow: scroll !important;
+  overflow: auto;
 
 }
 
@@ -325,7 +325,7 @@ div.App > div.MoreInformation > p.Link {
 }
 
 /* All mobile users */
-@media (pointer:none), (pointer:coarse) {
+@media only screen and (max-width: 600px) {
   div.TextWrapper {
     margin-right: 20px !important;
     margin-left: 20px !important;
