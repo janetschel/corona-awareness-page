@@ -8,6 +8,8 @@ import MoreInformation from "./components/information/MoreInformation";
 import MoreInformationWeb from "./components/information/MoreInformationWeb";
 
 function App() {
+  document.title = "Corona betrifft auch Dich!"; // used to dynamically set the title so that it matches the url in a preview
+
   return (
     <div className="App">
       <ExpandablePageMenuIcon/>

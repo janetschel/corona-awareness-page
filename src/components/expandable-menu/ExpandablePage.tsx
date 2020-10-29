@@ -9,7 +9,7 @@ const handleClickBackToHomePage = () => {
 
 function ExpandablePage() {
   return (
-      <div className="ExpandablePage ExpandablePageIsVisible" id="ExpandablePage">
+      <div className="ExpandablePage" id="ExpandablePage">
         <div className="Header">
           <Typography
               className="BackToHomePage"

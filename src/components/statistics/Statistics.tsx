@@ -33,7 +33,7 @@ function Statistics() {
         </Typography>
 
         <Typography className="AllDeathsHeader">Alle Todesfälle:</Typography>
-        <Typography className="AllDeaths">{Formatter.formatNumber(allDeaths)}</Typography>
+        <Typography className="AllDeaths">{Formatter.formatNumber(allDeaths)} †</Typography>
 
         <Typography className="AllDeathsDeltaHeader">zum Vortag:</Typography>
         <Typography className="AllDeathsDelta">+ {Formatter.formatNumber(deathsDelta)}</Typography>
