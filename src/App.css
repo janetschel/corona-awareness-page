@@ -1,8 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;0,700;1,400&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 p {
+  font-family: 'Ubuntu', sans-serif !important;
+  white-space: nowrap;
+}
+
+div.App {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-areas:
+          ". . expandable-icon"
+          "textwrapper-catchline textwrapper-catchline textwrapper-catchline"
+          ". . ." /* . . . is used for spacing */
+          "statistics statistics statistics"
+          "more-info-web more-info-web more-info-web"
+          "more-info more-info more-info";
+
+  grid-template-rows: 50px 150px 100px auto 100px auto;
+  grid-template-columns: repeat(3, calc(100vw * 1/3));
+  justify-items: center;
+
+  overflow-x: hidden !important;
+  -ms-overflow-x: hidden !important;
+}
+
+div.App > div.ExpandablePageMenuIcon {
+  margin-right: 10px;
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  background-image: url("coronavirus.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  grid-area: expandable-icon;
+  justify-self: end;
+
+  transition: transform .5s ease-in-out;
+  transform: scale(1);
+}
+
+div.App > div.ExpandablePageMenuIcon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+div.App > div.ExpandablePage {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+
+  position: absolute;
+  z-index: 1;
+
+  margin-left: 100%;
+  transition: margin-left ease-in-out 1s;
+
+  display: grid;
+  grid-template-areas:
+          "header header header"
+          ". content ."
+          ". . .";
+  grid-template-rows: 100px auto 20px;
+  grid-template-columns: 10% auto 10%;
+}
+
+.ExpandablePageIsVisible {
+  margin-left: 0 !important;
+}
+
+div.App > div.ExpandablePage > div.Header  {
+  display: inline-block;
   margin: 10px;
+  margin-left: 20px !important;
+
+  grid-area: header;
+  justify-self: start;
+}
+
+div.App > div.ExpandablePage > div.Header > p.BackToHomePage:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+div.App > div.ExpandablePage > div.Content {
+  grid-area: content;
+}
+
+div.App > div.ExpandablePage > div.Content > p{
+  font-weight: 300;
+  font-size: 16px;
+}
+
+div.App > div.TextWrapper {
+  grid-area: textwrapper-catchline;
+  height: fit-content;
+  margin-top: 20px;
+}
+
+div.App > div.TextWrapper > p {
+  text-align: center;
+}
+
+div.App > div.TextWrapper > p.Catchline {
+  font-weight: 700;
+  font-size: 64px;
+}
+
+div.App > div.TextWrapper > p.Subtext {
+  text-align: center;
+  font-size: 24px;
+}
+
+div.App > div.Statistics {
+  grid-area: statistics;
+  display: grid;
+  grid-template-areas:
+          "header header header"
+          "allInfectionsHeader . allInfections"
+          "infectionsDeltaHeader . infectionsDelta"
+          ". . ."
+          "allDeathsHeader . allDeaths"
+          "deathsDeltaHeader . deathsDelta"
+          ". . ."
+          "timeOfDataHeader . timeOfData";
+
+  grid-template-rows: auto repeat(7, 30px);
+  grid-template-columns: auto 75px auto;
+  justify-items: start;
+
+  width: 100vw;
+  height: fit-content;
+  padding: 20px;
+  background-color: rgba(181, 181, 181, 0.2);
+}
+
+div.App > div.Statistics > p.Header {
+  font-size: 28px;
+  grid-area: header;
+  justify-self: center;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+div.App > div.Statistics > p.HeaderSmall {
+  font-size: 28px;
+  grid-area: header;
+  justify-self: center;
+  margin-bottom: 30px;
+  text-align: center;
+  display: none;
+}
+
+div.App > div.Statistics > p.AllInfectionsHeader {
+  grid-area: allInfectionsHeader;
+  justify-self: end;
+}
+
+div.App > div.Statistics > p.AllInfections {
+  grid-area: allInfections;
+}
+
+div.App > div.Statistics > p.AllInfectionsDeltaHeader {
+  grid-area: infectionsDeltaHeader;
+  justify-self: end;
+}
+
+div.App > div.Statistics > p.AllInfectionsDelta {
+  grid-area: infectionsDelta;
+}
+
+div.App > div.Statistics > p.AllDeathsHeader {
+  grid-area: allDeathsHeader;
+  justify-self: end;
+}
+
+div.App > div.Statistics > p.AllDeaths {
+  grid-area: allDeaths;
+}
+
+div.App > div.Statistics > p.AllDeathsDeltaHeader {
+  grid-area: deathsDeltaHeader;
+  justify-self: end;
+}
+
+div.App > div.Statistics > p.AllDeathsDelta {
+  grid-area: deathsDelta;
+}
+
+div.App > div.Statistics > p.TimeOfDataHeader {
+  grid-area: timeOfDataHeader;
+  justify-self: end;
+}
+
+div.App > div.Statistics > p.TimeOfData {
+  grid-area: timeOfData;
+}
+
+div.App > div.MoreInformationWeb {
+  grid-area: more-info-web;
+  display: none;
+  justify-self: center;
+  width: 100vw;
+  align-self: center;
+  background-color: #830d0d;
+}
+
+div.App > div.MoreInformationWeb > p.Information{
+  font-size: 12px;
+  white-space: normal !important;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+div.App > div.MoreInformation {
+  grid-area: more-info;
+  justify-self: center;
+  align-self: center;
+}
+
+div.App > div.MoreInformation > p {
+  display: inline;
+}
+
+div.App > div.MoreInformation > p.Link {
+  text-decoration: underline;
+}
+
+div.App > div.MoreInformation > p.Link {
+  cursor: pointer;
+}
+
+/* Some Media queries for somewhat responsive design for mobile etc. */
+@media (max-width: 1030px) {
+  div.TextWrapper > p.Catchline {
+    font-size: 52px !important;
+  }
+}
+
+@media (max-width: 850px) {
+  div.TextWrapper > p.Subtext {
+    display: none !important;
+  }
+
+  div.TextWrapper > p.Catchline {
+    white-space: normal;
+  }
+
+  div.Statistics > p.Header {
+    display: none !important;
+  }
+
+  div.Statistics > p.HeaderSmall {
+    display: block !important;
+  }
+}
+
+@media (max-width: 560px) {
+  div.TextWrapper > p.Catchline {
+    font-size: 36px !important;
+  }
+
+  div.Statistics {
+    grid-template-areas:
+          "header header header"
+          "allInfectionsHeader . allInfections"
+          "infectionsDeltaHeader . infectionsDelta"
+          ". . ."
+          "allDeathsHeader . allDeaths"
+          "deathsDeltaHeader . deathsDelta" !important;
+
+    grid-template-rows: auto repeat(5, 30px) !important;
+  }
+
+  div.Statistics > p.HeaderSmall{
+    margin-top: 10px;
+  }
+
+  div.Statistics > p.TimeOfDataHeader {
+    display: none;
+  }
+
+  div.Statistics > p.TimeOfData {
+    display: none;
+  }
+
+  div.MoreInformation > p {
+    font-size: 12px !important;
+  }
+}
+
+/* All mobile users */
+@media (pointer:none), (pointer:coarse) {
+  div.TextWrapper {
+    margin-right: 20px !important;
+    margin-left: 20px !important;
+  }
+
+  div.ExpandablePage {
+    display: none !important;
+  }
+
+  div.ExpandablePageMenuIcon {
+    display: none !important;
+  }
+
+  div.MoreInformationWeb {
+    display: block !important;
+  }
 }
