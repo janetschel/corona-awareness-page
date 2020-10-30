@@ -35,16 +35,16 @@ function ExpandablePageContent() {
           wie im Camp Nou, dem größten Fußballstadion der Welt, Platz finden.
         </Typography>
         <Typography>
-          Warum also die Verhamlosung oder gar Leugnung von Corona, wobei wir doch sehen, dass die ganze Welt gerade kämpft?
+          Warum also die Verharmlosung oder gar Leugnung von Corona, wobei wir doch sehen, dass die ganze Welt gerade kämpft?
         </Typography>
         <Typography className="NoMargin">
-          Die zehn Minuten Maske beim Einkaufen, die Kontaktbeschränkungen auf zwei Haushalte und der Lockdown Light ist doch bei
+          Die zehn Minuten Mund-Nase-Bedeckung tragen, die Kontaktbeschränkungen auf zwei Haushalte und der Lockdown Light ist doch bei
           weitem kein Grund, verlorene Menschenleben in Kauf zu nehmen.
         </Typography>
         <Typography>
           Natürlich sind die Maßnahmen nicht perfekt, natürlich könnte man darüber nachdenken Schulen zu schließen und die Wirtschaft
           besser zu stärken, aber die <strong>kollektive Gesundheit</strong> unserer Mitbürger und Mitbürgerinnen hat auf jeden Fall
-          Priorität über eine abgebrochene Zake an Deinem Krönchen, weil Du mal wieder eine Maske anziehen musst.
+          Priorität über eine abgebrochene Zacke an Deinem Krönchen, weil Du mal wieder eine Maske anziehen musst.
         </Typography>
         <Typography>
           Auch wenn es vielleicht stimmen mag, dass Corona Dich nie so hart erwischt, dass du Dich am nächsten Tag auf einmal auf der
@@ -53,7 +53,7 @@ function ExpandablePageContent() {
         </Typography>
         <Typography>
           Eine Herdenimmunität, wie sie von vielen Aluhüten angepriesen wird, ist demnach auch nicht so einfach.
-          Neuste Studien zeigen (Quelle Quarks), dass eine vergangene Corona-Infektion nicht unbedingt Immunutät bedeutet.
+          Neuste Studien zeigen (Quelle Quarks), dass eine vergangene Corona-Infektion nicht unbedingt Immunität bedeutet.
         </Typography>
         <Typography className="NoMargin">
           Sollte man Medien überhaupt vertrauen? <strong>Natürlich!</strong> Wir befinden uns in Deutschland keineswegs in einer
@@ -61,13 +61,13 @@ function ExpandablePageContent() {
           die Regierung ausstrahlen.
         </Typography>
         <Typography>
-          Genau dafür werden in Deutschland Rundfunkgebühren gezahlt. Für unabhänige, zensurfreie Berichtserstattung; anders als in
+          Genau dafür werden in Deutschland Rundfunkgebühren gezahlt. Für unabhängige, zensurfreie Berichtserstattung; anders als in
           Nord-Korea oder Russland, wo jede Information hinterfragt werden kann.
         </Typography>
         <Typography>
           Das einzige Problem bei der Berichtserstattung, welche wir in Deutschland haben, sind die Verschwörungstheoretiker
           wie <del>Atilla Hildmann</del> oder seit neustem auch <del>Michael Wendler</del>,
-          welche <strong>bewusst</strong> Falschinformationen ohne jegliche Reue zu verspühren, blindlings an ihre Anhänger
+          welche <strong>bewusst</strong> Falschinformationen ohne jegliche Reue zu verspüren, blindlings an ihre Anhänger
           propagieren.
         </Typography>
         <Typography>
@@ -91,7 +91,7 @@ function ExpandablePageContent() {
           in ein "normales" Leben zurück - falls wir bis dahin <strong>noch leben</strong>.
         </Typography>
         <Typography>
-          Informiert Euch! Glaubt keinen Idioten, die irgendwas herunterschreien und Anhänger manipulieren wollen. Den etablierten
+          Informiert Euch! Glaubt keinen Idioten, die irgendwas herunter schreien und Anhänger manipulieren wollen. Den etablierten
           Medien in Deutschland ist <strong>zu vertrauen!</strong>
         </Typography>
         <Typography>
