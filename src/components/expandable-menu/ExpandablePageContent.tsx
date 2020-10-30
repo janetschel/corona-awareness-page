@@ -98,7 +98,7 @@ function ExpandablePageContent() {
           Durch diese Pandemie schaffen wir es nur zusammen - und nicht alleine.
         </Typography>
         <Typography className="SmallBottom">
-          Stand: 29. Oktober 2020
+          Stand: 30. Oktober 2020
         </Typography>
         <Typography className={"SmallBottom BackToTop"} onClick={() => handleClick()}>
           Zurück nach oben
