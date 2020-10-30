@@ -6,6 +6,15 @@
   overflow-x:hidden;
 }
 
+body {
+  background-color: white;
+  transition: background-color 1.5s ease-in-out;
+}
+
+.BlackedOut {
+  background-color: black !important;
+}
+
 p {
   font-family: 'Ubuntu', sans-serif !important;
   white-space: nowrap;
@@ -93,8 +102,22 @@ div.App > div.ExpandablePage > div.Header > p.BackToHomePage:hover {
 
 div.App > div.ExpandablePage > div.Content {
   grid-area: content;
-  overflow: scroll !important;
+  overflow-x: hidden !important;
+  overflow-y: scroll !important;
+}
 
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+div.App > div.ExpandablePage > div.Content > ::selection {
+  background: white;
+  color: black;
+}
+
+div.App > div.ExpandablePage > div.Content > p > ::selection {
+  background: white;
+  color: black;
 }
 
 div.App > div.ExpandablePage > div.Content > p{

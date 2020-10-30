@@ -4,7 +4,10 @@ import ExpandablePageContent from "./ExpandablePageContent";
 
 const handleClickBackToHomePage = () => {
   const expandablePage = document.getElementById("ExpandablePage")!;
+  const body = document.body!;
+
   expandablePage.classList.remove("ExpandablePageIsVisible");
+  body.classList.remove("BlackedOut");
 }
 
 function ExpandablePage() {

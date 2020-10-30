@@ -18,7 +18,7 @@ function Statistics() {
   const colorOfElement = infectionsDelta > 10000 ? "#c42929" : "black";
 
   return (
-      <div className="Statistics">
+      <div className="Statistics" id="Statistics">
         <Typography className="Header">Aktuelle Zahlen zur Corona-Pandemie in Deutschland</Typography>
         <Typography className="HeaderSmall">Aktuelle Zahlen </Typography>
 
