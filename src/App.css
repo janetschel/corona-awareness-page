@@ -273,6 +273,7 @@ div.App > div.MoreInformationWeb > p.Information{
 div.App > div.MoreInformation {
   grid-area: more-info;
   justify-self: center;
+  text-align: center;
   align-self: center;
 }
 
@@ -286,6 +287,13 @@ div.App > div.MoreInformation > p.Link {
 
 div.App > div.MoreInformation > p.Link {
   cursor: pointer;
+}
+
+div.App > div.MoreInformation > p.Copyright {
+  margin-top: 30px;
+  font-size: 12px;
+  font-weight: 300;
+  color: #9b9b9b;
 }
 
 /* Some Media queries for somewhat responsive design for mobile etc. */
