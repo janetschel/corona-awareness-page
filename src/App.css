@@ -179,9 +179,12 @@ div.App > div.Statistics {
           "allDeathsHeader . allDeaths"
           "deathsDeltaHeader . deathsDelta"
           ". . ."
+          "allVaccinationsHeader . allVaccinations"
+          "allVaccinationsDeltaHeader . vaccinationsDelta"
+          ". . ."
           "timeOfDataHeader . timeOfData";
 
-  grid-template-rows: auto repeat(7, 30px);
+  grid-template-rows: auto repeat(9, 30px);
   grid-template-columns: auto 75px auto;
   justify-items: start;
 
@@ -242,6 +245,24 @@ div.App > div.Statistics > p.AllDeathsDeltaHeader {
 
 div.App > div.Statistics > p.AllDeathsDelta {
   grid-area: deathsDelta;
+}
+
+div.App > div.Statistics > p.AllVaccinationsHeader{
+  grid-area: allVaccinationsHeader;
+  justify-self: end;
+}
+
+div.App > div.Statistics > p.AllVaccinations{
+  grid-area: allVaccinations;
+}
+
+div.App > div.Statistics > p.AllVaccinationsDeltaHeader{
+  grid-area: allVaccinationsDeltaHeader;
+  justify-self: end;
+}
+
+div.App > div.Statistics > p.AllVaccinationsDelta{
+  grid-area: vaccinationsDelta;
 }
 
 div.App > div.Statistics > p.TimeOfDataHeader {
@@ -333,7 +354,10 @@ div.App > div.MoreInformation > p.Copyright {
           "infectionsDeltaHeader . infectionsDelta"
           ". . ."
           "allDeathsHeader . allDeaths"
-          "deathsDeltaHeader . deathsDelta" !important;
+          "deathsDeltaHeader . deathsDelta" 
+          ". . ."
+          "allVaccinationsHeader . allVaccinations"
+          "allVaccinationsDeltaHeader . allVaccinationsDelta" !important;
 
     grid-template-rows: auto repeat(5, 30px) !important;
   }
