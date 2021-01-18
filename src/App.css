@@ -357,7 +357,7 @@ div.App > div.MoreInformation > p.Copyright {
           "deathsDeltaHeader . deathsDelta"
           ". . ."
           "allVaccinationsHeader . allVaccinations"
-          "allVaccinationsDeltaHeader . allVaccinationsDelta" !important;
+          "allVaccinationsDeltaHeader . vaccinationsDelta" !important;
 
     grid-template-rows: auto repeat(7, 30px) !important;
   }
