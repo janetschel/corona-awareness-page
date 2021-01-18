@@ -359,7 +359,7 @@ div.App > div.MoreInformation > p.Copyright {
           "allVaccinationsHeader . allVaccinations"
           "allVaccinationsDeltaHeader . allVaccinationsDelta" !important;
 
-    grid-template-rows: auto repeat(5, 30px) !important;
+    grid-template-rows: auto repeat(7, 30px) !important;
   }
 
   div.Statistics > p.HeaderSmall{
