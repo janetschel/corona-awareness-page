@@ -21,6 +21,8 @@ function MoreInformation() {
         <Typography className="Link" onClick={() => handleClick()}>hier</Typography>
 
         <br />
+        <Typography className="VaccineInformation">Daten zur Impfung werden nur Werktags aktualisiert!</Typography>
+        <br />
 
         <Typography className="Information Copyright">Icons made by </Typography>
         <Typography className="Link Copyright" title="Freepik" onClick={() => handleClickAuthor()}>Freepik</Typography>

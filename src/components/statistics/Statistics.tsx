@@ -9,12 +9,15 @@ function Statistics() {
   const [infectionsDelta, setInfectionsDelta] = useState(0);
   const [allDeaths, setAllDeaths] = useState(0);
   const [deathsDelta, setDeathsDelta] = useState(0);
+  const [allVaccinations, setAllVaccinations] = useState(0);
+  const [vaccinationsDelta, setVaccinationsDelta] = useState(0);
 
   Api.makeApiRequestToRKIData(UrlConfig.urlAllInfections).then(result => setAllInfections(result));
   Api.makeApiRequestToRKIData(UrlConfig.urlInfectionsDelta).then(result => setInfectionsDelta(result));
   Api.makeApiRequestToRKIData(UrlConfig.urlAllDeaths).then(result => setAllDeaths(result));
   Api.makeApiRequestToRKIData(UrlConfig.urlDeathsDelta).then(result => setDeathsDelta(result));
-
+  Api.makeApiRequestToRKIData(UrlConfig.urlAllVaccinations).then(result => setAllVaccinations(result));
+  Api.makeApiRequestToRKIData(UrlConfig.urlAllVaccinationsDelta).then(result => setVaccinationsDelta(result));
   const colorOfElement = infectionsDelta > 10000 ? "#c42929" : "black";
 
   return (
@@ -37,6 +40,12 @@ function Statistics() {
 
         <Typography className="AllDeathsDeltaHeader">zum Vortag:</Typography>
         <Typography className="AllDeathsDelta">+ {Formatter.formatNumber(deathsDelta)}</Typography>
+
+        <Typography className="AllVaccinationsHeader">Alle Impfungen:</Typography>
+        <Typography className="AllVaccinations">{Formatter.formatNumber(allVaccinations)}</Typography>
+        
+        <Typography className="AllVaccinationsDeltaHeader">zum Vortag:</Typography>
+        <Typography className="AllVaccinationsDelta">+ {Formatter.formatNumber(vaccinationsDelta)}</Typography>
 
         <Typography className="TimeOfDataHeader">Stand dieser Daten:</Typography>
         <Typography className="TimeOfData">{Formatter.formatLocalDateString((new Date(Date.now())).toLocaleDateString())}</Typography>
