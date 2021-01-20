@@ -11,6 +11,7 @@ function Statistics() {
   const [deathsDelta, setDeathsDelta] = useState(0);
   const [allVaccinations, setAllVaccinations] = useState(0);
   const [vaccinationsDelta, setVaccinationsDelta] = useState(0);
+  const [sevenDayIncident, setSevenDayIncident] = useState(0);
 
   Api.makeApiRequestToRKIData(UrlConfig.urlAllInfections).then(result => setAllInfections(result));
   Api.makeApiRequestToRKIData(UrlConfig.urlInfectionsDelta).then(result => setInfectionsDelta(result));
@@ -18,7 +19,20 @@ function Statistics() {
   Api.makeApiRequestToRKIData(UrlConfig.urlDeathsDelta).then(result => setDeathsDelta(result));
   Api.makeApiRequestToRKIData(UrlConfig.urlAllVaccinations).then(result => setAllVaccinations(result));
   Api.makeApiRequestToRKIData(UrlConfig.urlAllVaccinationsDelta).then(result => setVaccinationsDelta(result));
+  Api.makeIncidentRequest(UrlConfig.urlIncident).then(result => setSevenDayIncident(result));
+
   const colorOfElement = infectionsDelta > 10000 ? "#c42929" : "black";
+  
+  let colorOfInfections = "black";
+  if(sevenDayIncident > 100){
+    colorOfInfections =  "red" //"#c42929"
+  }
+  else if(sevenDayIncident < 50){
+    colorOfInfections =  "green" //"#43c429"
+  }
+  else{
+    colorOfInfections = "yellow" //"#e0de4c"
+  }
 
   return (
       <div className="Statistics" id="Statistics">
@@ -26,7 +40,12 @@ function Statistics() {
         <Typography className="HeaderSmall">Aktuelle Zahlen </Typography>
 
         <Typography className="AllInfectionsHeader">Alle Infektionen:</Typography>
-        <Typography className="AllInfections">{Formatter.formatNumber(allInfections)}</Typography>
+        <Typography 
+            className="AllInfections"
+            style={{ color: colorOfInfections}}
+        >
+          {Formatter.formatNumber(allInfections)}
+        </Typography>
         <Typography className="AllInfectionsDeltaHeader">zum Vortag:</Typography>
         <Typography
             className="AllInfectionsDelta"
