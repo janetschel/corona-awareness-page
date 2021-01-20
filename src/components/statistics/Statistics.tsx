@@ -40,7 +40,7 @@ function Statistics() {
         <Typography className="HeaderSmall">Aktuelle Zahlen </Typography>
 
         <Typography className="AllInfectionsHeader">Alle Infektionen:</Typography>
-        <Typography 
+        <Typography
             className="AllInfections"
             style={{ color: colorOfInfections}}
         >
