@@ -38,7 +38,7 @@ function MoreInformation() {
         <Typography className="Link Copyright" title="Flaticon" onClick={() => handleClickFlaticon()}> www.flaticon.com </Typography>
         <br/>
         <Typography className="Information Copyright">Current data from </Typography>
-        <Typography className="Link Copyright" title="RKI" onClick={() => handleClickSourceRKI}>RKI</Typography>
+        <Typography className="Link Copyright" title="RKI" onClick={() => handleClickSourceRKI()}>RKI</Typography>
         <Typography className="Information Copyright"> and </Typography>
         <Typography className="Link Copyright" title="ESRI" onClick={() => handleClickSourceEsri()}>ESRI</Typography>
       </div>
