@@ -13,6 +13,14 @@ const handleClickFlaticon = () => {
   window.open("https://www.flaticon.com/", "true");
 };
 
+const handleClickSourceRKI = () => {
+  window.open("https://experience.arcgis.com/experience/478220a4c454480e823b17327b2bf1d4");
+};
+
+const handleClickSourceEsri = () => {
+  window.open("https://experience.arcgis.com/experience/db557289b13c42e4ac33e46314457adc");
+};
+
 
 function MoreInformation() {
   return(
@@ -28,6 +36,11 @@ function MoreInformation() {
         <Typography className="Link Copyright" title="Freepik" onClick={() => handleClickAuthor()}>Freepik</Typography>
         <Typography className="Information Copyright"> from </Typography>
         <Typography className="Link Copyright" title="Flaticon" onClick={() => handleClickFlaticon()}> www.flaticon.com </Typography>
+        <br/>
+        <Typography className="Information Copyright">Current data from </Typography>
+        <Typography className="Link Copyright" title="RKI" onClick={() => handleClickSourceRKI()}>RKI</Typography>
+        <Typography className="Information Copyright"> and </Typography>
+        <Typography className="Link Copyright" title="ESRI" onClick={() => handleClickSourceEsri()}>ESRI</Typography>
       </div>
   );
 }

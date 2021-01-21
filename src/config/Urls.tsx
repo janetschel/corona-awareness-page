@@ -4,6 +4,7 @@ const urlAllDeaths = "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/
 const urlDeathsDelta = "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_COVID19/FeatureServer/0/query?f=json&where=NeuerTodesfall%20IN(1%2C%20-1)&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22AnzahlTodesfall%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&resultType=standard&cacheHint=true"
 const urlAllVaccinations = "https://services.arcgis.com/OLiydejKCZTGhvWg/arcgis/rest/services/BL_mit_Impfdaten_join/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Impfungen_kumulativ%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&resultType=standard&cacheHint=true"
 const urlAllVaccinationsDelta = "https://services.arcgis.com/OLiydejKCZTGhvWg/arcgis/rest/services/BL_mit_Impfdaten_join/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Differenz_zum_Vortag%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&resultType=standard&cacheHint=true"
+const urlIncident = "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_COVID19_Landkreise_Table_Demo_18b5f806160a4aa686ca65819fbe4462/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=RS%20asc&resultOffset=0&resultRecordCount=1&resultType=standard&cacheHint=true"
 
 const UrlConfig = {
   urlAllInfections,
@@ -11,7 +12,8 @@ const UrlConfig = {
   urlAllDeaths,
   urlDeathsDelta,
   urlAllVaccinations,
-  urlAllVaccinationsDelta
+  urlAllVaccinationsDelta,
+  urlIncident
 }
 
 export default UrlConfig;
