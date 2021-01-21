@@ -304,9 +304,6 @@ div.App > div.MoreInformation > p {
 
 div.App > div.MoreInformation > p.Link {
   text-decoration: underline;
-}
-
-div.App > div.MoreInformation > p.Link {
   cursor: pointer;
 }
 

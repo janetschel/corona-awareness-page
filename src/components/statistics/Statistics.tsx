@@ -22,16 +22,17 @@ function Statistics() {
   Api.makeIncidentRequest(UrlConfig.urlIncident).then(result => setSevenDayIncident(result));
 
   const colorOfElement = infectionsDelta > 10000 ? "#c42929" : "black";
+  let information = "Derzeit werden die Infektionszahlen anhand des 7-Tage-Inzidenz-Wertes eingefärbt.\nAlles über 100 wird rot eingefärbt.\nAlles zwischen 50 und 100 wird gelb eingefärbt.\nAlles unter 50 wird grün eingefärbt.\n\nDerzeitiger Wert: "+sevenDayIncident;
   
   let colorOfInfections = "black";
   if(sevenDayIncident > 100){
-    colorOfInfections =  "red" //"#c42929"
+    colorOfInfections =  "#c42929"
   }
   else if(sevenDayIncident < 50){
-    colorOfInfections =  "green" //"#43c429"
+    colorOfInfections =  "#43c429"
   }
   else{
-    colorOfInfections = "yellow" //"#e0de4c"
+    colorOfInfections = "#e0de4c"
   }
 
   return (
@@ -42,6 +43,7 @@ function Statistics() {
         <Typography className="AllInfectionsHeader">Alle Infektionen:</Typography>
         <Typography
             className="AllInfections"
+            title={information}
             style={{ color: colorOfInfections}}
         >
           {Formatter.formatNumber(allInfections)}
