@@ -70,7 +70,18 @@ div.App > div.ExpandablePage {
   position: absolute;
   z-index: 1;
 
-  margin-left: 300%; /* It seems that margin-left: 100% fails for firefox.  */
+  margin-left: 100%; 
+  
+  /*
+  This is a true fix for the Firefox issue.
+  Apparently the ExpandablePage ID is defaulting to be centered on the page.
+  Adding left: 0; will start to position the page on its correct location.
+
+  Dirty fix would be to up the margin-left value.
+  This increases the time it takes to display that page tho
+  */  
+  left: 0;
+
   transition: margin-left ease-in-out 1s;
 
   display: grid;
