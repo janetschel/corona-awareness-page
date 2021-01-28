@@ -32,7 +32,7 @@ function Statistics() {
     colorOfInfections =  "#43c429"
   }
   else{
-    colorOfInfections = "#e0de4c"
+    colorOfInfections = "#e0d916"
   }
 
   return (
