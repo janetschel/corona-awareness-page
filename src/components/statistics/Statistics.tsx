@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 import {Typography} from "@material-ui/core";
 import UrlConfig from "../../config/Urls";
 import Api from "../../utils/api/Api";
@@ -44,13 +46,16 @@ function Statistics() {
         <Typography className="HeaderSmall">Aktuelle Zahlen </Typography>
 
         <Typography className="AllInfectionsHeader">Alle Infektionen:</Typography>
+        <Tippy content={information}>
         <Typography
             className="AllInfections"
+            id="AllInfections"
             title={information}
             style={{ color: colorOfInfections}}
         >
           {Formatter.formatNumber(allInfections)}
         </Typography>
+        </Tippy>
         <Typography className="AllInfectionsDeltaHeader">zum Vortag:</Typography>
         <Typography
             className="AllInfectionsDelta"
