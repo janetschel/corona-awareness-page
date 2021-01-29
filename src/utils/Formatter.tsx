@@ -28,7 +28,7 @@ const formatNumber = (numberToFormat: number): string => {
 };
 
 const formatLocalDateString = (dateString: string): string => {
-  return `${dateString}, 00:00`;
+  return `${dateString}, 03:00 Uhr`;
 };
 
 const Formatter = {
