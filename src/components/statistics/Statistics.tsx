@@ -46,14 +46,14 @@ function Statistics() {
         <Typography className="HeaderSmall">Aktuelle Zahlen </Typography>
 
         <Typography className="AllInfectionsHeader">Alle Infektionen:</Typography>
-        <Tippy 
+        <Tippy
           content={
             <>
             Die derzeiten Zahlen werden anhand der 7-Tage-Inzidenz gefärbt!<br/>
             Derzeitige Inzidenz: {sevenDayIncident}<br/>
             Derzeitiger Status: {status}
             </>
-          } 
+          }
           allowHTML={true}
         >
         <Typography
