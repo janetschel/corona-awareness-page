@@ -54,7 +54,7 @@ function Statistics() {
         <Tippy
           content={
             <>
-            Die derzeiten Zahlen werden anhand der 7-Tage-Inzidenz gefärbt!<br/>
+            Die derzeitigen Zahlen werden anhand der 7-Tage-Inzidenz gefärbt!<br/>
             Derzeitige Inzidenz: {sevenDayIncident}<br/>
             Derzeitiger Status: {status}
             </>
