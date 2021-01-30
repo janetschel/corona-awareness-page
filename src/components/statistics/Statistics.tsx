@@ -26,6 +26,16 @@ function Statistics() {
   const colorOfElement = infectionsDelta > 10000 ? "#c42929" : "black";
   let status = "Kritisch";
   let colorOfInfections = "black";
+  let currentDate = new Date(Date.now());
+
+  /*
+      The user visits on the 30.01 @ 1:00am
+      The website would show that the current data is from the 30.01 @ 3:00am.
+      This should be able to fix this problem
+  */
+  if(currentDate.getHours() < 3){
+      currentDate.setDate(currentDate.getDate() - 1);
+  }
 
   if(sevenDayIncident > 100){
     colorOfInfections =  "#c42929"
@@ -85,7 +95,7 @@ function Statistics() {
         <Typography className="AllVaccinationsDelta">+ {Formatter.formatNumber(vaccinationsDelta)}</Typography>
 
         <Typography className="TimeOfDataHeader">Stand dieser Daten:</Typography>
-        <Typography className="TimeOfData">{Formatter.formatLocalDateString((new Date(Date.now())).toLocaleDateString())}</Typography>
+        <Typography className="TimeOfData">{Formatter.formatLocalDateString(currentDate.toLocaleDateString())}</Typography>
       </div>
   );
 }
