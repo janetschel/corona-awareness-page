@@ -24,8 +24,8 @@ function Statistics() {
   Api.makeIncidentRequest(UrlConfig.urlIncident).then(result => setSevenDayIncident(result));
 
   const colorOfElement = infectionsDelta > 10000 ? "#c42929" : "black";
-  let status = "Kritisch";
-  let colorOfInfections = "black";
+  let status = "Gefährlich";
+  let colorOfInfections = "#e0d916";
   let currentDate = new Date(Date.now());
 
   /*
@@ -37,17 +37,12 @@ function Statistics() {
       currentDate.setDate(currentDate.getDate() - 1);
   }
 
-  if(sevenDayIncident > 100){
-    colorOfInfections =  "#c42929"
-    status = "Kritisch"
-  }
-  else if(sevenDayIncident < 50){
-    colorOfInfections =  "#43c429"
-    status = "Ungefährlich"
-  }
-  else{
-    colorOfInfections = "#e0d916"
-    status = "Gefährlich"
+  if (sevenDayIncident > 100) {
+    colorOfInfections =  "#c42929";
+    status = "Kritisch";
+  } else if (sevenDayIncident < 50) {
+      colorOfInfections =  "#43c429";
+      status = "Ungefährlich";
   }
 
   return (
