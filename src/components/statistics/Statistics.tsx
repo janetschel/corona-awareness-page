@@ -83,7 +83,7 @@ function Statistics() {
         <Typography className="AllDeathsDeltaHeader">zum Vortag:</Typography>
         <Typography className="AllDeathsDelta">+ {Formatter.formatNumber(deathsDelta)}</Typography>
 
-        <Typography className="AllVaccinationsHeader">Alle Impfungen:</Typography>
+        <Typography className="AllVaccinationsHeader">Alle Erstimpfungen:</Typography>
         <Typography className="AllVaccinations">{Formatter.formatNumber(allVaccinations)}</Typography>
         
         <Typography className="AllVaccinationsDeltaHeader">zum Vortag:</Typography>
