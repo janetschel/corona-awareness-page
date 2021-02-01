@@ -405,3 +405,7 @@ div.App > div.MoreInformation > p.Copyright {
     display: block !important;
   }
 }
+
+.tippy-content{
+  font-family: 'Ubuntu', sans-serif !important;
+}

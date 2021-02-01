@@ -7,7 +7,7 @@ const makeApiRequestToRKIData = async (url: string) => {
 
 const makeIncidentRequest = async (url: string) => {
   const response = await (await fetch(url)).json();
-  const data: number = response.features[0].attributes.cases7_per_100k; // this should work
+  const data: number = response.features[0].attributes.cases7_per_100k.toFixed(2); // this should work
 
   return data;
 }

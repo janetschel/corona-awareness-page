@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 import {Typography} from "@material-ui/core";
 import UrlConfig from "../../config/Urls";
 import Api from "../../utils/api/Api";
@@ -22,17 +24,25 @@ function Statistics() {
   Api.makeIncidentRequest(UrlConfig.urlIncident).then(result => setSevenDayIncident(result));
 
   const colorOfElement = infectionsDelta > 10000 ? "#c42929" : "black";
-  let information = "Derzeit werden die Infektionszahlen anhand des 7-Tage-Inzidenz-Wertes eingefärbt.\nAlles über 100 wird rot eingefärbt.\nAlles zwischen 50 und 100 wird gelb eingefärbt.\nAlles unter 50 wird grün eingefärbt.\n\nDerzeitiger Wert: "+sevenDayIncident;
-  
-  let colorOfInfections = "black";
-  if(sevenDayIncident > 100){
-    colorOfInfections =  "#c42929"
+  let status = "Gefährlich";
+  let colorOfInfections = "#e0d916";
+  let currentDate = new Date(Date.now());
+
+  /*
+      The user visits on the 30.01 @ 1:00am
+      The website would show that the current data is from the 30.01 @ 3:00am.
+      This should be able to fix this problem
+  */
+  if(currentDate.getHours() < 3){
+      currentDate.setDate(currentDate.getDate() - 1);
   }
-  else if(sevenDayIncident < 50){
-    colorOfInfections =  "#43c429"
-  }
-  else{
-    colorOfInfections = "#e0de4c"
+
+  if (sevenDayIncident > 100) {
+    colorOfInfections =  "#c42929";
+    status = "Kritisch";
+  } else if (sevenDayIncident < 50) {
+      colorOfInfections =  "#43c429";
+      status = "Ungefährlich";
   }
 
   return (
@@ -41,13 +51,24 @@ function Statistics() {
         <Typography className="HeaderSmall">Aktuelle Zahlen </Typography>
 
         <Typography className="AllInfectionsHeader">Alle Infektionen:</Typography>
+        <Tippy
+          content={
+            <>
+            Die derzeitigen Zahlen werden anhand der 7-Tage-Inzidenz gefärbt!<br/>
+            Derzeitige Inzidenz: {sevenDayIncident}<br/>
+            Derzeitiger Status: {status}
+            </>
+          }
+          allowHTML={true}
+        >
         <Typography
             className="AllInfections"
-            title={information}
+            id="AllInfections"
             style={{ color: colorOfInfections}}
         >
           {Formatter.formatNumber(allInfections)}
         </Typography>
+        </Tippy>
         <Typography className="AllInfectionsDeltaHeader">zum Vortag:</Typography>
         <Typography
             className="AllInfectionsDelta"
@@ -62,14 +83,14 @@ function Statistics() {
         <Typography className="AllDeathsDeltaHeader">zum Vortag:</Typography>
         <Typography className="AllDeathsDelta">+ {Formatter.formatNumber(deathsDelta)}</Typography>
 
-        <Typography className="AllVaccinationsHeader">Alle Impfungen:</Typography>
+        <Typography className="AllVaccinationsHeader">Alle Erstimpfungen:</Typography>
         <Typography className="AllVaccinations">{Formatter.formatNumber(allVaccinations)}</Typography>
         
         <Typography className="AllVaccinationsDeltaHeader">zum Vortag:</Typography>
         <Typography className="AllVaccinationsDelta">+ {Formatter.formatNumber(vaccinationsDelta)}</Typography>
 
         <Typography className="TimeOfDataHeader">Stand dieser Daten:</Typography>
-        <Typography className="TimeOfData">{Formatter.formatLocalDateString((new Date(Date.now())).toLocaleDateString())}</Typography>
+        <Typography className="TimeOfData">{Formatter.formatLocalDateString(currentDate.toLocaleDateString())}</Typography>
       </div>
   );
 }

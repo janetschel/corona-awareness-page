@@ -15,7 +15,7 @@ function ExpandablePageContent() {
           - geschützt werden, und ist deshalb auch in unserem Grundgesetz im fünften Artikel verankert.
         </Typography>
         <Typography className="NoMargin">
-          Jeder darf seine Meinung frei äußern und in einem Diskurs mit der Politik treten.
+          Jeder darf seine Meinung frei äußern und in einen Diskurs mit der Politik treten.
         </Typography>
         <Typography>
           Der gesunde - und in einer Demokratie (welche wir in Deutschland übrigens haben) gewünschte - Diskurs ist allerdings dort als
@@ -23,28 +23,27 @@ function ExpandablePageContent() {
           10.000 Menschen ihr Leben gelassen.
         </Typography>
         <Typography>
-          So hoch und grausam diese Zahl auch scheinen mag, können wir uns glücklich schätzen, dass COVID-19 in Deutschland nur so
+          So hoch und grausam diese Zahl auch scheinen mag, können wir uns glücklich schätzen, dass COVID-19 in Deutschland derzeit nur so
           wenige Menschenleben gefordert hat.. so makaber das auch klingen mag.
         </Typography>
         <Typography className="NoMargin">
           Ein Blick, als Beispiel, in die Vereinigten Staaten von Amerika genügt doch schon, um zu sehen, wie ernst es um Corona steht.
         </Typography>
         <Typography>
-          <strong>227.703</strong> (Stand: 29.10.2020, 13:30; Quelle: Johns Hopkins University) ist die Zahl an Menschen, die
-          dort den tragischen Kampf um ihr Leben verloren haben. Zum Vergleich: das sind <strong>2,28 mal</strong> so viele Menschen,
+          <strong>429.312</strong> (Stand: 29.01.2021, 01:40; Quelle: The New York Times) ist die Zahl an Menschen, die
+          dort den tragischen Kampf um ihr Leben verloren haben. Zum Vergleich: das sind <strong>4,32 mal</strong> so viele Menschen,
           wie im Camp Nou, dem größten Fußballstadion der Welt, Platz finden.
         </Typography>
         <Typography>
           Warum also die Verharmlosung oder gar Leugnung von Corona, wobei wir doch sehen, dass die ganze Welt gerade kämpft?
         </Typography>
         <Typography className="NoMargin">
-          Die zehn Minuten Mund-Nase-Bedeckung tragen, die Kontaktbeschränkungen auf zwei Haushalte und der Lockdown Light ist doch bei
-          weitem kein Grund, verlorene Menschenleben in Kauf zu nehmen.
+          Das Tragen eines Mund- und Nasenschutzes (FFP2- oder Medizinmasken!), die Kontaktbeschränkungen und die aktuellen Bund und Länder
+          Regelungen sind bei weitem kein Grund, Menschenleben in Kauf zu nehmen!
         </Typography>
         <Typography>
-          Natürlich sind die Maßnahmen nicht perfekt, natürlich könnte man darüber nachdenken Schulen zu schließen und die Wirtschaft
-          besser zu stärken, aber die <strong>kollektive Gesundheit</strong> unserer Mitbürger und Mitbürgerinnen hat auf jeden Fall
-          Priorität über eine abgebrochene Zacke an Deinem Krönchen, weil Du mal wieder eine Maske anziehen musst.
+          Natürlich sind die Maßnahmen nicht perfekt aber die <strong>kollektive Gesundheit</strong> unserer Mitbürger und Mitbürgerinnen
+          hat auf jeden Fall Priorität über eine abgebrochene Zacke an Deinem Krönchen, weil Du mal wieder eine Maske anziehen musst.
         </Typography>
         <Typography>
           Auch wenn es vielleicht stimmen mag, dass Corona Dich nie so hart erwischt, dass du Dich am nächsten Tag auf einmal auf der
@@ -66,13 +65,13 @@ function ExpandablePageContent() {
         </Typography>
         <Typography>
           Das einzige Problem bei der Berichtserstattung, welche wir in Deutschland haben, sind die Verschwörungstheoretiker
-          wie <del>Atilla Hildmann</del> oder seit neustem auch <del>Michael Wendler</del>,
+          wie <del>Atilla Hildmann</del>, <del>Michael Wendler</del> oder <del>Xavier Naidoo</del>,
           welche <strong>bewusst</strong> Falschinformationen ohne jegliche Reue zu verspüren, blindlings an ihre Anhänger
           propagieren.
         </Typography>
         <Typography>
           <strong>DAS</strong> ist das eigentliche Problem, welches wir in Mitten der Corona-Pandemie noch zusätzlich gegenüber stehen.
-          Schafe, welche ihrem Hüter vertrauen, und Hüter, welche das ausnutzen. Volkshetze gegen den Staat auf bester Ebene.
+          Schafe, welche ihrem Hüter vertrauen, und Hüter, welche dieses Vertrauen ausnutzen. Volkshetze gegen den Staat auf bester Ebene.
         </Typography>
         <Typography className="NoMargin">
           Ein freier Zugang zu Berichtserstattung ist in Deutschland gesichert. Sich zu informieren ein hohes Gut.
@@ -83,7 +82,7 @@ function ExpandablePageContent() {
           Konsens.
         </Typography>
         <Typography>
-          Solange wir Corona nicht sicher gegenüber stehen können, und auch noch keinen Impfstoff haben, geht die Gesundheit
+          Solange wir Corona nicht sicher gegenüber stehen können, und der Großteil der Bevölkerung nicht geimpft ist, geht die Gesundheit
           <strong> aller Mitbürger</strong> vor unserer persönlicher Entfaltung.
         </Typography>
         <Typography>
@@ -98,7 +97,7 @@ function ExpandablePageContent() {
           Durch diese Pandemie schaffen wir es nur zusammen - und nicht alleine.
         </Typography>
         <Typography className="SmallBottom">
-          Stand: 30. Oktober 2020
+          Stand: 29. Januar 2021
         </Typography>
         <Typography className={"SmallBottom BackToTop"} onClick={() => handleClick()}>
           Zurück nach oben
